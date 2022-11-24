@@ -46,7 +46,7 @@ console.log(todo.serialize()) // 👈 serialization results in camel case
 ```
 
 Before adding this package: 
-```json 
+```javascript
 {
   id: 1,
   thing_to_do: "Stop coding and walk the dog 🐕"
@@ -54,7 +54,7 @@ Before adding this package:
 ```
 
 After adding this package 🎉
-```json 
+```javascript
 {
   id: 1,
   thingToDo: "Stop coding and walk the dog 🐕"
@@ -70,7 +70,7 @@ console.log(todos.serialize()) // 👈 paginated serialization
 
 Results in: 
 
-```json
+```javascript
 {
 	meta: {
 		total: 1,
@@ -172,10 +172,10 @@ return paginator.toJSON()
 
 If you have a question or found a bug, feel free to [open an issue](https://github.com/AdonifyCode/lucid-camel-case-serializer/issues).
 
-[npm-image]: https://img.shields.io/npm/v/lucid-camel-case-serializer.svg?style=for-the-badge&logo=npm
-[npm-url]: https://npmjs.org/package/lucid-camel-case-serializer "npm"
+[npm-image]: https://img.shields.io/npm/v/@adonify/lucid-camel-case-serializer.svg?style=for-the-badge&logo=npm
+[npm-url]: https://npmjs.org/package/@adonify/lucid-camel-case-serializer "npm"
 
-[license-image]: https://img.shields.io/npm/l/lucid-camel-case-serializer?color=blueviolet&style=for-the-badge
+[license-image]: https://img.shields.io/npm/l/@adonify/lucid-camel-case-serializer?color=blueviolet&style=for-the-badge
 [license-url]: LICENSE.md "license"
 
 [typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
