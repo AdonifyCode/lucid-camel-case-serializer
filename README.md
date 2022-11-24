@@ -91,7 +91,7 @@ Results in:
 
 There are a few ways you can do this in your AdonisJS app.
 
-### In a provider (suggested method)
+#### In a provider (suggested method)
 
 ```ts
 
@@ -119,7 +119,7 @@ export default class AppProvider {
 
 Choosing to auto serialize in the configuration step will essentially do this for you in the package provider.
 
-### Create a base model your models will extend and register the strategy
+#### Create a base model your models will extend and register the strategy
 
 ```ts
 import CamelCaseNamingStrategy from "@ioc:Adonify/LucidCamelCaseSerializer";
@@ -132,7 +132,7 @@ export default class AppBaseModel extends BaseModel {
 
 This will serialize your models but not paginated calls directly to the Database module.
 
-### Add the naming strategy to specific models
+#### Add the naming strategy to specific models
 
 ```ts
 import CamelCaseNamingStrategy from "@ioc:Adonify/LucidCamelCaseSerializer";
@@ -148,7 +148,7 @@ class Todo extends BaseModel {
 }
 ```
 
-### Adding the serializer to the Database paginator directly
+#### Adding the serializer to the Database paginator directly
 
 ```ts
 import CamelCaseNamingStrategy from "@ioc:Adonify/LucidCamelCaseSerializer";
@@ -157,7 +157,7 @@ import Database from '@ioc:Adonis/Lucid/Database'
 Database.SimplePaginator.namingStrategy = new CamelCaseNamingStrategy()
 ```
 
-### Adding the paginator on the fly
+#### Adding the paginator on the fly
 
 ```ts
 import Database from '@ioc:Adonis/Lucid/Database'
