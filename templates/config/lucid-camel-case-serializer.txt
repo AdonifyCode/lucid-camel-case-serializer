@@ -1,0 +1,8 @@
+import { LucidCamelCaseSerializerConfig } from '@ioc:Adonify/LucidCamelCaseSerializer'
+
+const camelCaseSerializerConfig: LucidCamelCaseSerializerConfig = {
+  autoSerializeModels: {{ autoSerializeModels }},
+  autoSerializeDatabasePagination: {{ autoSerializeDatabasePagination }} 
+}
+
+export default camelCaseSerializerConfig 1

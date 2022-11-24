@@ -1,0 +1,135 @@
+{
+  "name": "@adonify/lucid-camel-case-serializer",
+  "version": "0.0.0",
+  "description": " Serialize your lucid models as camel cased with the minimal effort possible.",
+  "main": "build/providers/LucidCamelCaseSerializer.js",
+  "types": "build/adonis-typings/index.d.ts",
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "node -r @adonisjs/require-ts/build/register bin/test",
+    "test:watch": "nodemon -r @adonisjs/assembler/build/register bin/test",
+    "mrm": "mrm --preset=@adonisjs/mrm-preset",
+    "release": "np --message=\"chore(release): %s\"",
+    "version": "npm run build",
+    "lint": "eslint . --ext=.ts",
+    "clean": "del-cli build",
+    "copyfiles": "copyfiles \"templates/**/*.txt\" \"instructions.md\" build",
+    "compile": "npm run lint && npm run clean && tsc && npm run copyfiles",
+    "build": "npm run compile",
+    "prepublishOnly": "npm run build",
+    "format": "prettier --write .",
+    "commit": "git-cz"
+  },
+  "keywords": [],
+  "author": "adonify.ca,justDare",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdonifyCode/lucid-camel-case-serializer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AdonifyCode/lucid-camel-case-serializer/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@adonisjs/core": "^5.9.0",
+    "@adonisjs/lucid": "^18.3.0",
+    "@adonisjs/mrm-preset": "^5.0.3",
+    "@adonisjs/require-ts": "^2.0.13",
+    "@adonisjs/sink": "^5.4.2",
+    "@poppinss/dev-utils": "^2.0.3",
+    "@types/node": "^18.11.9",
+    "commitizen": "^4.2.5",
+    "copyfiles": "^2.4.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "del-cli": "^5.0.0",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-adonis": "^2.1.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.2",
+    "mrm": "^4.1.13",
+    "nodemon": "^2.0.20",
+    "np": "^7.6.2",
+    "prettier": "^2.8.0",
+    "typescript": "^4.8.4"
+  },
+  "peerDependencies": {
+    "@adonisjs/core": "^5.9.0",
+    "@adonisjs/lucid": "^18.3.0"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src",
+      "tests",
+      "providers",
+      "adonis-typings",
+      "test-helpers"
+    ],
+    "ext": "ts"
+  },
+  "adonisjs": {
+    "types": "@adonify/lucid-camel-case-serializer",
+    "providers": [
+      "@adonify/lucid-camel-case-serializer"
+    ],
+    "instructions": "./build/instructions.js",
+    "instructionsMd": "./build/instructions.md"
+  },
+  "mrmConfig": {
+    "core": false,
+    "license": "MIT",
+    "services": [],
+    "minNodeVersion": "16.13.1",
+    "probotApps": []
+  },
+  "np": {
+    "contents": ".",
+    "anyBranch": false
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:adonis/typescriptPackage",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "build"
+  ],
+  "files": [
+    "build/src",
+    "build/adonis-typings",
+    "build/providers",
+    "build/instructions.md",
+    "build/instructions.js",
+    "build/templates"
+  ],
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "useTabs": false,
+    "quoteProps": "consistent",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "printWidth": 100
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
