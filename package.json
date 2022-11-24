@@ -1,6 +1,6 @@
 {
   "name": "@adonify/lucid-camel-case-serializer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": " Serialize your lucid models as camel cased with the minimal effort possible.",
   "main": "build/providers/LucidCamelCaseSerializer.js",
   "types": "build/adonis-typings/index.d.ts",
